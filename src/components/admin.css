@@ -1,0 +1,38 @@
+
+
+/* .admin_table {
+  margin: 10px;
+  color: white;
+  padding: 20px;
+  font-weight: bolder;
+  border-collapse: collapse;
+  width: 100%;
+} */
+.admin_table{
+       margin: auto;
+       
+       color: white;
+         padding: 20px;
+           font-weight: bolder
+}
+.admin_table td{
+    padding: 20px;
+}
+.admin_table th{
+    font-weight: bolder;
+    background-color: #333;
+   color: white;
+}
+/* 
+
+.admin_table td {
+  padding: 20px;
+  border: 1px solid white;
+  text-align: left;
+}
+
+.admin_table th {
+  font-weight: bold;
+  color: white;
+  background-color: #333; /* Optional: improves visibility */
+/* } */ 

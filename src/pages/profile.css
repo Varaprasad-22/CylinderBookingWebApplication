@@ -1,0 +1,48 @@
+.Profile_container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 70%;
+  border-radius: 10px;
+  text-align: left;
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+  background-color: rgba(255, 255, 255, 0.05); 
+}
+
+.sections_menu {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  width: 20%;  
+  min-width: 120px;
+  gap: 20px;
+  font-size: 90%;
+  font-weight: 600;
+  padding: 10px;
+  border-right: 2px solid white;
+}
+
+.sections_menu span {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sections_menu span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section_content {
+  margin-left: 20px;
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
