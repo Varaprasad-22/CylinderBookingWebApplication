@@ -1,0 +1,109 @@
+.Card {
+  /* border: 2px solid black; */
+  box-sizing: border-box;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  width: 100%;
+  max-width: 300px; 
+  position: relative;
+  color: white;
+  transition: 0.3s;
+  animation: fadeIn 0.2s ease;
+}
+
+
+.Card hr {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.cardDetails {
+    line-height: 15px;
+    font-weight: 600;
+}
+
+.card_data_align {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Card .imageContainer {
+    /* width: 30%; */
+    position: relative;
+    width: 100%;
+    /* height: 30%; */
+}
+
+.Card .imageContainer .image {
+    margin: auto;
+    min-width: 100%;
+    height: 150px;
+    overflow: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.Card .imageContainer .controll {
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.select_options {
+    width: 100%;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(256,256,256,0.3);
+}
+
+.select_options option {
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .Card {
+        width: 45%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .Card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .Card .imageContainer .image {
+        height: 180px;
+    }
+
+    .Card .imageContainer .controll {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .select_options {
+        font-size: 16px;
+    }
+}
+

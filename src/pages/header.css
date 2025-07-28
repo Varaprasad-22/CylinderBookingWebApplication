@@ -1,0 +1,133 @@
+.header {
+    /* border:2px solid black; */
+    padding: 10px 20px;
+    /* width: 100%; */
+    /* background: rgba(255,255,255,0.6); */
+    /* backdrop-filter: blur(10px); */
+    /* position: fixed; */
+    top: 0;
+    z-index: 100;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Hamburger Icon */
+.toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+}
+
+/* Logo */
+.nav-logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    padding: 20px 20px;
+    /* border:2px solid black; */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-links li a:hover {
+    font-weight: bold;
+    background: rgba(174, 174, 174, 0.948);
+}
+
+/* Left Side */
+.nav-leftSide {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Right Side */
+.nav-rightSide {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-rightSide a,
+.nav-user {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 15px;
+         z-index: 1000;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-rightSide {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li a {
+        font-size: 16px;
+    }
+
+    .nav-logo {
+        font-size: 24px;
+    }
+
+    .toggle {
+        font-size: 22px;
+    }
+}

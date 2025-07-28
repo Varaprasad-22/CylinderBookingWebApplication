@@ -1,0 +1,94 @@
+.login-signIn{
+    /* border:2px solid black; */
+    padding:10px 20px;
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    z-index:200;
+    margin: auto;
+    top: 50%;
+    left: 48%;
+    color: white;
+      transform: translate(-50%, -50%);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.auth h2{
+    text-align: center;
+}
+.auth{
+    border-radius: 20px;
+    width:300px;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+    
+    transition: background 0.3s;
+    /* display: flex; */
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    
+    animation: fadeIn 0.5s ease;
+}
+.login-form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(128, 128, 128,0.4);
+    margin: 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+.login-form button{
+    border: none;
+    border-radius:20px;
+    color: whitesmoke;
+    /* background-color: rgb(128, 128, 128,0.4); */
+    background:  rgb(128, 128, 128,0.4);
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 50%;
+    margin: auto;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1; /* Ensure it's fully visible */
+}
+.closeButton{
+    position: absolute;
+    right: 10px;
+    top:10px; 
+    font-size: 25px;
+    cursor: pointer;
+    background: transparent; 
+  border: none;
+}
+
+@keyframes fadeIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes background {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
