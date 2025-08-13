@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
 import { db, collection, getDocs } from "../firebase";
-import CardComponent from "../components/CardComponent";
+import CardComponent from "../components/cardComponent";
 import "./home.css";
 
 const Home = () => {
