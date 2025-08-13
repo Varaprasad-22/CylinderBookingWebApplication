@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './pages/Header';
+import Header from './pages/header';
 import SignIn from './pages/signIn';
 import Home from './pages/home';
 import Cart from './components/cart';
