@@ -30,29 +30,29 @@ const Cart = () => {
         return
       }
       //payments
-      const functions = getFunctions();;
-      const stripe = await stripePromise;
-      const createPaymentIntent = httpsCallable(functions, "createPaymentIntent");
-      const totalAmount = total * 100; // Convert to paise
+      // const functions = getFunctions();;
+      // const stripe = await stripePromise;
+      // const createPaymentIntent = httpsCallable(functions, "createPaymentIntent");
+      // const totalAmount = total * 100; // Convert to paise
 
-      //creation of payment way
-      const res = await createPaymentIntent({ amount: totalAmount });
-      const clientSecret = res.data.clientSecret;
+      // //creation of payment way
+      // const res = await createPaymentIntent({ amount: totalAmount });
+      // const clientSecret = res.data.clientSecret;
 
       //stimulate payment
-      const result = await stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement), // Assuming you have set up CardElement
+      // const result = await stripe.confirmCardPayment(clientSecret, {
+      //   payment_method: {
+      //     card: elements.getElement(CardElement), // Assuming you have set up CardElement
 
-          billing_details: {
-            name: phone,
-          },
-        }
-      });
+      //     billing_details: {
+      //       name: phone,
+      //     },
+      //   }
+      // });
 
-      if (result.error) {
-        alert("Payment failed: " + result.error.message);
-      } else if (result.paymentIntent.status === "succeeded") {
+      // if (result.error) {
+      //   alert("Payment failed: " + result.error.message);
+      // } else if (result.paymentIntent.status === "succeeded") {
 
         const orderData = {
           phone,
@@ -78,7 +78,7 @@ const Cart = () => {
         setstate('');
         setcity('');
         setpincode('')
-      }
+      // }
     } catch (error) {
       console.error("Order Error:", error);
       window.alert("Failed to place order ❌");
